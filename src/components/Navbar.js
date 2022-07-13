@@ -3,11 +3,19 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav>
-      <ul>
-        <a href="/home">Home</a>
-        <a href="/tracker">Carb Tracker</a>
-        <a href="/about">About</a>
-      </ul>
+      <div className="table">
+        <ul className="inline">
+          <li>
+            <a href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/tracker">Carb Tracker</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
