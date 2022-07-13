@@ -1,0 +1,16 @@
+.mainHeading {
+    font-family: sans-serif;
+    color:rgb(26, 38, 108);
+    font-size: 40pt;
+}
+
+.infoPara {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: larger; 
+    color:rgb(26, 38, 108);
+    width:50%;
+}
+
+.homeContentDiv {
+    margin:10%;
+}
