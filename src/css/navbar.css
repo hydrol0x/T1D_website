@@ -1,13 +1,12 @@
 
 nav {
     background-color: lightblue;
-    height: 50px;
+    height: 5vh;
     padding-top: 20px;
 }
 
 ul {
     margin: 0;
-    width:50%
 }
 
 .links ul {
