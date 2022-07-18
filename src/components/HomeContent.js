@@ -1,4 +1,5 @@
 import "../css/homecontent.css";
+import DiabetesLogo from "../components/DiabetesLogo.js";
 
 const HomeContent = () => {
   return (
@@ -14,16 +15,10 @@ const HomeContent = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.{" "}
       </p>
+      <div className="test">test</div>
+      <DiabetesLogo />
     </div>
   );
 };
 
-const DiabetesLogo = () => {
-  return (
-    <div className="logoDiv">
-      <img src="img" alt="Diabetes Logo" width="500" height="600"></img>
-    </div>
-  );
-};
-
-export default { HomeContent, DiabetesLogo };
+export default HomeContent;
