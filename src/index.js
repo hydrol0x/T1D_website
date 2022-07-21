@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Import pages to route to
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Tracker from "./pages/Tracker";
+import CarbTracker from "./pages/CarbTracker";
+import ErrorPage from "./pages/ErrorPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,8 +16,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/tracker" element={<Tracker />} />
+        <Route path="/tracker" element={<CarbTracker />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
