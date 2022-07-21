@@ -13,7 +13,7 @@ const CarbTracker = () => {
   return (
     <div className="CarbTrackerDiv">
       <h1 className="trackerh1"> Carb tracker </h1>
-      <Tracker numForms={Array(numForms).fill(null)} />
+      <Tracker numForms={[...Array(numForms).keys()]} />
       <CreateButton addForm={addForm} />
     </div>
   );

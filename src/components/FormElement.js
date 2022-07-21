@@ -1,9 +1,9 @@
 const FormElement = ({ id }) => {
   return (
     <div>
-      <input type="text" className="food" />
-      <input type="text" className="weight" />
-      <input type="text" className="carbs" />
+      <input id={`${id}food`} type="text" className="food" />
+      <input id={`${id}food`} type="text" className="weight" />
+      <input id={`${id}food`} type="text" className="carbs" />
       <br />
     </div>
   );
