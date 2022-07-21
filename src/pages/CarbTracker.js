@@ -1,10 +1,12 @@
+import CarbTrackerContent from "../components/CarbTrackerContent";
 import "../css/carbTracker.css";
 
 const CarbTracker = () => {
   return (
     <div>
-      <h1 className="trackerh1"> Carb tracker </h1>
-      <div className="tracker">TODO: implement tracker</div>
+      <CarbTrackerContent />
     </div>
   );
 };
+
+export default CarbTracker;

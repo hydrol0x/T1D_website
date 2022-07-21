@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar.js";
+import AboutContent from "../components/AboutContent.js";
 
 function About() {
   return (
     <div>
-      <Navbar />
+      <AboutContent />
     </div>
   );
 }
