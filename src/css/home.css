@@ -1,0 +1,43 @@
+/* body {
+   overflow-x: hidden; 
+} */
+
+.homeContentDiv {
+    background-color: #ecf9ff;
+    margin:0;
+    padding: 0;
+    height: 93vh;
+    display: grid;
+    grid-template-columns: 10% 60% 30%; 
+    grid-template-rows: 10% 20% 30% 10%;
+    overflow: hidden;
+}
+
+.mainHeading {
+    font-family: sans-serif;
+    color:rgb(26, 38, 108);
+    font-size: 40pt;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.infoPara {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: larger; 
+    color:rgb(26, 38, 108);
+    width:50%;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+.logoDiv {
+    grid-row:3;
+    grid-column: 3;
+}
+
+img {
+    height:700px;
+    width:700px;
+}
+

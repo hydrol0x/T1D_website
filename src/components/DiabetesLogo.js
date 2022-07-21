@@ -3,7 +3,7 @@ import diabetesLogoImage from "../t1dlogo.png";
 const DiabetesLogo = () => {
   return (
     <div className="logoDiv">
-      <img src={diabetesLogoImage} alt="t1dlogo" width="500" height="500" />
+      <img src={diabetesLogoImage} alt="t1dlogo" width="800" height="800" />
     </div>
   );
 };
