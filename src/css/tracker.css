@@ -1,0 +1,46 @@
+/* width of first input is  300 */
+/* width of second input is  90 */
+/* width of third input is  60 */
+
+.Tracker > img {
+   width:40px;
+   height: 40px; 
+   opacity: 70%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   transition: opacity .25s;
+}
+
+.Tracker > img:hover {
+    opacity: 20%;
+}
+
+.headingWrapper {
+    height: 30px;
+    display: inline-grid; 
+    grid-template-rows: 50px;
+    grid-template-columns: 312px 102px 72px;
+    justify-items: center;
+}
+
+.headingWrapper > h1 {
+    font-size: medium;
+    font-family: sans-serif;
+    color:gray;
+}
+
+.headingWrapper:nth-child(0) {
+    grid-row: 1;
+}
+
+.headingWrapper:nth-child(1) {
+    grid-row: 2;
+}
+
+.headingWrapper:nth-child(2) {
+    grid-row: 3;
+}
+

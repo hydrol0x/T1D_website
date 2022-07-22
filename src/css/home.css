@@ -3,7 +3,7 @@
 } */
 
 .homeContentDiv {
-    background-color: #ecf9ff;
+    background-color: #f8fdff;
     margin:0;
     padding: 0;
     height: 93vh;
@@ -15,7 +15,7 @@
 
 .mainHeading {
     font-family: sans-serif;
-    color:rgb(26, 38, 108);
+    color:rgb(48, 69, 189);
     font-size: 40pt;
     grid-column: 2;
     grid-row: 2;

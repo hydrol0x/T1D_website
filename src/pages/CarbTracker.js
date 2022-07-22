@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Tracker from "../components/Tracker";
-import CreateButton from "../components/CreateButton";
 import "../css/carbTracker.css";
 
 const CarbTracker = () => {
@@ -13,8 +12,7 @@ const CarbTracker = () => {
   return (
     <div className="CarbTrackerDiv">
       <h1 className="trackerh1"> Carb tracker </h1>
-      <Tracker numForms={[...Array(numForms).keys()]} />
-      <CreateButton addForm={addForm} />
+      <Tracker addForm={addForm} numForms={[...Array(numForms).keys()]} />
     </div>
   );
 };
