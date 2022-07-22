@@ -5,15 +5,7 @@ const CreateButton = ({ addForm }) => {
     e.preventDefault();
     addForm();
   };
-  return (
-    <img
-      src={image}
-      onClick={handleClick}
-      alt="add input"
-      height={100}
-      width={100}
-    />
-  );
+  return <img src={image} onClick={handleClick} alt="add input" />;
 };
 
 export default CreateButton;
