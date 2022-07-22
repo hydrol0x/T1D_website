@@ -1,6 +1,6 @@
 import "../css/formElement.css";
 
-const FormElement = ({ id }) => {
+const FormElement = ({ key, id }) => {
   return (
     <div className="FormElement">
       <div className="inputDiv" id="foodDiv">

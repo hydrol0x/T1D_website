@@ -11,7 +11,7 @@ const Tracker = ({ addForm, numForms }) => {
       </div>
       <form>
         {numForms.map((id) => {
-          return <FormElement id={id} />;
+          return <FormElement id={id} key={id} />;
         })}
       </form>
       <CreateButton addForm={addForm} />
