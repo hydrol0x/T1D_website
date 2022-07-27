@@ -1,4 +1,5 @@
 import DiabetesLogo from "../components/DiabetesLogo";
+import DownArrow from "../components/DownArrow";
 import "../css/home.css";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
         mollit anim id est laborum.{" "}
       </p>
       <DiabetesLogo />
+      <DownArrow />
     </div>
   );
 }
