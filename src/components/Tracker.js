@@ -1,14 +1,18 @@
 import FormElement from "./FormElement";
 import CreateButton from "./CreateButton";
+import SubmitButton from "./SubmitButton";
 
 import "../css/tracker.css";
 
-const Tracker = ({ addForm, numForms }) => {
-  const handleSubmit = (e) => {
-    const inputs = document.getElementsByTagName("input");
-    e.preventDefault();
-    Array.from(inputs).map((input) => {
-      console.log({ [input.className]: input.value });
+const Tracker = ({ totalCarbs, setTotalCarbs, addForm, numForms }) => {
+  const handleSubmit = () => {
+    const zip = (rows) => rows[0].map((_, c) => rows.map((row) => row[c]));
+    const food = Array.from(document.getElementsByClassName("food"));
+    const amount = Array.from(document.getElementsByClassName("weight"));
+    const vals = zip([food, amount]);
+    console.log(vals);
+    vals.map((val) => {
+      console.log(val[0].value + val[1].value);
     });
   };
   return (
@@ -20,8 +24,8 @@ const Tracker = ({ addForm, numForms }) => {
         {numForms.map((id) => {
           return <FormElement id={id} key={id} />;
         })}
-        <input type="button" value="submit" onClick={handleSubmit} />
       </form>
+      <SubmitButton handleSubmit={handleSubmit} />
       <CreateButton addForm={addForm} />
     </div>
   );
