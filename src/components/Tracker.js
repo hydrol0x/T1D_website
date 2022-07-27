@@ -6,7 +6,7 @@ import "../css/tracker.css";
 
 const Tracker = ({ totalCarbs, setTotalCarbs, addForm, numForms }) => {
   const handleSubmit = () => {
-    const zip = (rows) => rows[0].map((_, c) => rows.map((row) => row[c]));
+    const zip = (rows) => rows[0].map((_, c) => rows.map((row) => row[c])); // implemenation of a zip func
     const food = Array.from(document.getElementsByClassName("food"));
     const amount = Array.from(document.getElementsByClassName("weight"));
     const vals = zip([food, amount]);

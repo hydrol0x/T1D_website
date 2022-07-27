@@ -5,7 +5,7 @@ const SubmitButton = ({ handleSubmit }) => {
   };
   return (
     <button type="button" onClick={handleClick}>
-      Calculate
+      Calculate // TODO: add symbol or change text
     </button>
   );
 };
