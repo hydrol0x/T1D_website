@@ -12,11 +12,13 @@ const Tracker = ({ totalCarbs, setTotalCarbs, addForm, numForms }) => {
     const vals = zip([food, amount]);
     console.log(vals);
     vals.map((val) => {
-      console.log(val[0].value + val[1].value);
+      // val[0] dropdown, val[1] amount / weight
+      const carbs = val[0].value * val[1].value;
     });
   };
   return (
     <div className="Tracker">
+      <h1>{totalCarbs}</h1>
       <div className="headingWrapper">
         <h1>Food</h1> <h1>Amount</h1> <h1>Carbs</h1>
       </div>
