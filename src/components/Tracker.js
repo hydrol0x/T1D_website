@@ -4,18 +4,18 @@ import SubmitButton from "./SubmitButton";
 
 import "../css/tracker.css";
 
-const Tracker = ({ totalCarbs, setTotalCarbs, addForm, numForms }) => {
-  const handleSubmit = () => {
-    const zip = (rows) => rows[0].map((_, c) => rows.map((row) => row[c])); // implemenation of a zip func
-    const food = Array.from(document.getElementsByClassName("food"));
-    const amount = Array.from(document.getElementsByClassName("weight"));
-    const vals = zip([food, amount]);
-    console.log(vals);
-    vals.map((val) => {
-      // val[0] dropdown, val[1] amount / weight
-      const carbs = val[0].value * val[1].value;
-    });
+const Tracker = () => {
+  const [forms, setForms] = useState({
+    id0: { carbs: 0, amount: 0 },
+    id1: { carbs: 0, amount: 0 },
+    id2: { carbs: 0, amount: 0 },
+    id3: { carbs: 0, amount: 0 },
+  });
+
+  const addForm = () => {
+    setFormElements(numForms + 1);
   };
+
   return (
     <div className="Tracker">
       <h1>{totalCarbs}</h1>
@@ -23,11 +23,18 @@ const Tracker = ({ totalCarbs, setTotalCarbs, addForm, numForms }) => {
         <h1>Food</h1> <h1>Amount</h1> <h1>Carbs</h1>
       </div>
       <form>
-        {numForms.map((id) => {
-          return <FormElement id={id} key={id} />;
+        {Object.keys(forms).forEach((key, index) => {
+          val = forms[key];
+          <FormElement
+            forms={forms}
+            setForms={setForms}
+            id={key}
+            carbs={val.carbs}
+            amount={val.carbs}
+          />;
         })}
       </form>
-      <SubmitButton handleSubmit={handleSubmit} />
+      {/* <SubmitButton handleSubmit={handleSubmit} /> */}
       <CreateButton addForm={addForm} />
     </div>
   );
