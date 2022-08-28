@@ -2,7 +2,7 @@ import DiabetesLogo from "../components/DiabetesLogo";
 import DownArrow from "../components/DownArrow";
 import "../css/home.css";
 
-const Home = () => {
+const Home2 = () => {
   return (
     <div className="homeContentDiv">
       <h1 className="mainHeading"> What is Type 1 Diabetes?</h1>
@@ -22,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home2;

@@ -1,9 +1,9 @@
-function ErrorPage() {
+const ErrorPage = () => {
   return (
     <div>
       <p>ERROR invalid page</p>
     </div>
   );
-}
+};
 
 export default ErrorPage;

@@ -1,6 +1,6 @@
 import "../css/about.css";
 
-function About() {
+const About = () => {
   return (
     <div className="aboutContentDiv">
       <h1 className="h1About">About</h1>
@@ -10,6 +10,6 @@ function About() {
       </p>
     </div>
   );
-}
+};
 
 export default About;
