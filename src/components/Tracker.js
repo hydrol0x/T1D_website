@@ -6,12 +6,26 @@ import SubmitButton from "./SubmitButton";
 import "../css/tracker.css";
 
 const Tracker = () => {
-  const [forms, setForms] = useState({
-    0: { carbs: 0, amount: 0 },
-    1: { carbs: 0, amount: 0 },
-    2: { carbs: 0, amount: 0 },
-    3: { carbs: 0, amount: 0 },
-  });
+  const [forms, setForms] = useState([
+    { id: 0, carbs: 0, amount: 0 },
+    { id: 1, carbs: 0, amount: 0 },
+    { id: 2, carbs: 0, amount: 0 },
+    { id: 3, carbs: 0, amount: 0 },
+  ]);
+
+  const [totalCarbs, setTotalCarbs] = useState(0);
+
+  const handleSubmit = (e) => {
+    // display form vals
+    e.preventDefault();
+    let carbs = 0;
+    forms.map((form) => {
+      const carb = parseInt(e.target[form.id + "food"].value);
+      const amount = parseInt(e.target[form.id + "weight"].value);
+      carbs += carb * amount;
+    });
+    setTotalCarbs(carbs);
+  };
 
   const addForm = () => {
     // setForms({...dic.len()+1: { carbs: 0, amount: 0}})
@@ -20,10 +34,11 @@ const Tracker = () => {
 
   return (
     <div className="Tracker">
+      <h1> Total carbs is {totalCarbs}</h1>
       <div className="headingWrapper">
         <h1>Food</h1> <h1>Amount</h1> <h1>Carbs</h1>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         {Object.keys(forms).map((key, index) => {
           const val = forms[key];
           return (
@@ -36,8 +51,8 @@ const Tracker = () => {
             />
           );
         })}
+        <button type="submit">submit</button>
       </form>
-      {/* <SubmitButton handleSubmit={handleSubmit} /> */}
       <CreateButton addForm={addForm} />
     </div>
   );

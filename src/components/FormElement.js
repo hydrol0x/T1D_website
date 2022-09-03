@@ -1,24 +1,23 @@
 import "../css/formElement.css";
 
-const FormElement = ({ key, id }) => {
+const FormElement = ({ forms, setForms, id, carbs, amount }) => {
   return (
     <div className="FormElement">
       <div className="inputDiv" id="foodDiv">
         <select id={`${id}food`} className="food">
-          {/* TODO: unhardcode values, pass in through json */}
-          <option value="default"> </option>
-          <option value="apple">Apple</option>
-          <option value="rice">Rice</option>
-          <option value="banana">Banana</option>
-          <option value="orange">Orange</option>
-          <option value="bread">Bread</option>
+          <option value="0"> </option>
+          <option value="15">Apple</option>
+          <option value="20">Rice</option>
+          <option value="25">Banana</option>
+          <option value="30">Orange</option>
+          <option value="20">Bread</option>
         </select>
       </div>
       <div className="inputDiv" id="weightDiv">
-        <input id={`${id}weight`} type="text" className="weight" />
+        <input id={`${id}weight`} type="text" className="weight" defaultValue={amount}/>
       </div>
       <div className="inputDiv" id="carbsDiv">
-        <input id={`${id}carbs`} type="text" className="carbs" />
+        <input id={`${id}carbs`} type="text" className="carbs" defaultValue={amount}/>
       </div>
     </div>
   );

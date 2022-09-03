@@ -1,10 +1,6 @@
-const SubmitButton = ({ handleSubmit }) => {
-  const handleClick = (e) => {
-    e.preventDefault();
-    handleSubmit();
-  };
+const SubmitButton = () => {
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" >
       Calculate // TODO: add symbol or change text
     </button>
   );
