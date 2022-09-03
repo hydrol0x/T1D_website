@@ -15,21 +15,22 @@ const Tracker = () => {
 
   const [totalCarbs, setTotalCarbs] = useState(0);
 
+  const addForm = () => {
+    setForms([...forms, { id: forms.length, carbs: 0, amount: 0 }]);
+  };
+
   const handleSubmit = (e) => {
     // display form vals
     e.preventDefault();
     let carbs = 0;
+    console.log(forms);
     forms.map((form) => {
       const carb = parseInt(e.target[form.id + "food"].value);
       const amount = parseInt(e.target[form.id + "weight"].value);
+      console.log(e.target.value);
       carbs += carb * amount;
     });
     setTotalCarbs(carbs);
-  };
-
-  const addForm = () => {
-    // setForms({...dic.len()+1: { carbs: 0, amount: 0}})
-    // TODO: implement above
   };
 
   return (
