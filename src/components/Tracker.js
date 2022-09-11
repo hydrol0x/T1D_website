@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FormElement from "./FormElement";
 import CreateButton from "./CreateButton";
-import SubmitButton from "./SubmitButton";
 
 import "../css/tracker.css";
 
@@ -22,15 +21,17 @@ const Tracker = () => {
   const handleSubmit = (e) => {
     // display form vals
     e.preventDefault();
-    let carbs = 0;
+    let total_carbs = 0;
     console.log(forms);
     forms.map((form) => {
       const carb = parseInt(e.target[form.id + "food"].value);
       const amount = parseInt(e.target[form.id + "weight"].value);
-      console.log(e.target.value);
-      carbs += carb * amount;
+      const carbs = carb * amount;
+      total_carbs += carbs;
+      form.carbs = carbs;
     });
-    setTotalCarbs(carbs);
+    setForms(forms);
+    setTotalCarbs(total_carbs);
   };
 
   return (

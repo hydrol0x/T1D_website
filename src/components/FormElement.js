@@ -14,10 +14,17 @@ const FormElement = ({ forms, setForms, id, carbs, amount }) => {
         </select>
       </div>
       <div className="inputDiv" id="weightDiv">
-        <input id={`${id}weight`} type="text" className="weight" defaultValue={amount}/>
+        <input
+          id={`${id}weight`}
+          type="text"
+          className="weight"
+          defaultValue={amount}
+        />
       </div>
       <div className="inputDiv" id="carbsDiv">
-        <input id={`${id}carbs`} type="text" className="carbs" defaultValue={amount}/>
+        <p id={`${id}carbs`} className="carbs">
+          {carbs}
+        </p>
       </div>
     </div>
   );
