@@ -1,9 +1,9 @@
 import "../css/downArrow.css";
 
-const DownArrow = () => {
+const DownArrow = (href) => {
   return (
     <div className="down-arrow">
-      <a href="###"></a>
+      <a href={href}></a>
     </div>
   );
 };
