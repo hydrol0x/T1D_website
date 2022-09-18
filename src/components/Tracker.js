@@ -53,7 +53,9 @@ const Tracker = () => {
             />
           );
         })}
-        <button type="submit">submit</button>
+        <button className="trackerSubmit" type="submit">
+          Calculate
+        </button>
       </form>
       <CreateButton addForm={addForm} />
     </div>
