@@ -6,7 +6,16 @@ input {
     padding-left: 5px;
 }
 
-select {
+.inputDiv > p {
+    font-family: sans-serif;
+    display: inline;
+    text-align: center;
+    margin-left: 25px;
+    padding: 10px;
+}
+
+
+.inputDiv > select {
     margin:2px;
     height:35px;
     border-radius: 5px;
@@ -24,6 +33,3 @@ select {
     background-color: rgb(240, 240, 240);
 }
 
-.carbs {
-    width: 60px;
-}

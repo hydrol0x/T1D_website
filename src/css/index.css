@@ -1,12 +1,14 @@
+html {
+    height: 200vh;
+}
+
 body {
     margin:0;
     padding: 0;
+    height: 2vh;
+    overflow-y: scroll;
 }
 header{
     margin:0;
     padding:0;
-}
-
-a:active {
-    color:red;
 }

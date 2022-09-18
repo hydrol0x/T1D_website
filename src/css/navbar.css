@@ -24,11 +24,9 @@ a {
     font-size: 20pt;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 5px;
 }
 
 a:hover {
     color:rgb(58, 85, 243);
     transition: color .15s;
 }
-/* TODO: implement active change color to blue */
