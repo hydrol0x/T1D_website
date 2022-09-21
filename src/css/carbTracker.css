@@ -19,6 +19,10 @@
     grid-row: 3;
 }
 
+.Tracker > h1 {
+    font-family: sans-serif;
+}
+
 .trackerh1 {
     grid-column: 2;
     font-family: sans-serif;

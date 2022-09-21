@@ -36,7 +36,7 @@ const Tracker = () => {
 
   return (
     <div className="Tracker">
-      <h1> Total carbs is {totalCarbs}</h1>
+      <h1> Total carbs: {totalCarbs}</h1>
       <div className="headingWrapper">
         <h1>Food</h1> <h1>Amount</h1> <h1>Carbs</h1>
       </div>
